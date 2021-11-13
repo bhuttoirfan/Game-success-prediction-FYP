@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="{{url_for('static',filename='/img/web_icon_logo.png')}}" type="image/png">
+        <title>Game Success Prediction</title>
+        <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{{url_for('static',filename='/css/bootstrap.css')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='/vendors/linericon/style.css')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='/vendors/owl-carousel/owl.carousel.min.css')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='/css/magnific-popup.css')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='/vendors/nice-select/css/nice-select.css')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='/vendors/animate-css/animate.css')}}">
+        <!-- main css -->
+	<link rel="stylesheet" href="{{url_for('static',filename='/css/style.css')}}">
+        <link rel="stylesheet" href="{{url_for('static',filename='/css/responsive.css')}}">
+    </head>
+    <body>
+        
+        <header class="header_area">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="/"><img src="{{url_for('static',filename='/img/web_logo.png')}}" alt="" width="75px" height="75px"></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav justify-content-center">
+							<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="/research">Research</a>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="nav-item"><a href="/analyzer" class="primary_btn">Predict</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+    <section class="about_us_area section_gap">
+        <div class="container">
+            <div>
+                <br><br><br><br><br><br><br><br>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <h1>Games & Model</h1>
+                    <p>The games played in the past who reigned over the history are now seen
+                        nowhere near the games being played in present. We are going to analyze
+                        the change occurred in the users during these past years, and to understand
+                        the interest of the people in games and where it is leading to so that
+                        game developers can meet the needs of People who are playing games,
+                        and to understand what kind of games people want to play in future.
+                        In this way we can predict whether the game is going to be liked by
+                        the people or not, and whether the game will make to the top or not.</p>
+                </div>
+
+                <div class="col-lg-8">
+                    <form class="row contact_form" action="http://localhost:5000/uploader" method="POST">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="platform" placeholder="Platform of the game" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="genre" placeholder="Genre of the game" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="publisher" placeholder="Publisher of the game" required>
+                            </div>
+                             <div class="form-group">
+                                <input type="text" class="form-control" name="year-of-release" placeholder="Year of release" required>
+                            </div>
+                             <div class="form-group">
+                                <input type="text" class="form-control" name="critic-score" placeholder="Critic score" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="development-expense" placeholder="Development expense" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="marketing-expense" placeholder="Marketing expense" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="per-unit-price" placeholder="Per unit price" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 text-right">
+                            <button type="submit" value="submit" class="primary_btn">Predict</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="success" class="modal modal-message fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-close"></i>
+                    </button>
+                    <h2>Thank you</h2>
+                    <p>Your message is successfully sent...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals error -->
+
+        <div id="error" class="modal modal-message fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-close"></i>
+                        </button>
+                        <h2>Sorry !</h2>
+                        <p> Something went wrong </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--================End Contact Success and Error message Area =================-->
+
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/stellar.js"></script>
+	    <script src="js/jquery.magnific-popup.min.js"></script>
+	    <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+        <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+        <script src="vendors/isotope/isotope-min.js"></script>
+        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/mail-script.js"></script>
+        <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+        <script src="vendors/counter-up/jquery.counterup.min.js"></script>
+        <!-- contact js -->
+        <script src="js/jquery.form.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/contact.js"></script>
+        <!--gmaps Js-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+        <script src="js/gmaps.min.js"></script>
+        <script src="js/theme.js"></script>
+    </body>
+</html>
